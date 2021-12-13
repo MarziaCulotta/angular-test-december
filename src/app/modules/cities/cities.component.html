@@ -9,4 +9,4 @@
   <button class="btn btn-primary" (click)="getCity(selectedCity)">Invia</button>
 </div>
 
-<angtest-cards name={{citiesWeather$.name}} description={{citiesWeather$.weather[0].description}}></angtest-cards>
+<angtest-cards name={{citiesWeather$.name}} description={{citiesWeather$.weather[0].description}} *ngIf="selectedCity"></angtest-cards>
