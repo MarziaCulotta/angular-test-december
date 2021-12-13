@@ -22,7 +22,7 @@ export class CitiesComponent implements OnInit {
 
 
   getCity(value: string) {
-    this.citiesService.getCityByName(this.selectedCity).subscribe(response => console.log(response)
+    this.citiesService.getCityByName(this.selectedCity).subscribe(response => this.citiesWeather$ = response
     )
 
   }
