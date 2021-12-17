@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ICityWeather } from 'src/app/shared/models/city-weather.model';
+import { WeatherService } from '../weather/weather.service';
 
 @Component({
   selector: 'angtest-cards',
@@ -6,20 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
-  @Input() name!: string;
-  @Input() country!: string;
-  @Input() description!: string;
-  @Input() temp!: string;
-  @Input() icon!: string;
+  @Input() weather!: ICityWeather;
 
-  public today = new Date();
-
-  constructor() {}
+  constructor(private readonly weatherService: WeatherService) {}
 
   ngOnInit(): void {}
-
-  // convert() {
-  //  return (parseInt(this.temp) - 32) * 5.0/9.0;
-  // }
 
 }

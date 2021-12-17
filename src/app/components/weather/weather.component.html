@@ -6,7 +6,9 @@
     <label for="selectedCity">Inserisci una città</label>
     <input type="text" class="form-control mb-2" id="selectedCity" name="selectedCity" [(ngModel)]="selectedCity"/>
   </div>
-  <button class="btn btn-primary" (click)="getCity(selectedCity)">Invia</button>
+  <button class="btn btn-primary" (click)="getCity()">Invia</button>
 </div>
 
-<angtest-cards name={{citiesWeather$.name}} country={{citiesWeather$?.sys?.country}} description={{citiesWeather$.weather[0].description}} temp={{citiesWeather$.main.temp}} icon={{citiesWeather$.weather[0].icon}} *ngIf="cardIsVisible"></angtest-cards>
+<angtest-cards ></angtest-cards>
+
+<!-- *ngIf="cardIsVisible" -->
