@@ -11,20 +11,20 @@ export class CitiesComponent implements OnInit {
 
   public citiesWeather$: any = {};
   public selectedCity!: string;
-
+  public cardIsVisible = false;
 
   constructor(private readonly http: HttpClient, private readonly citiesService: CitiesService) { }
 
   ngOnInit(): void {
-    this.citiesService.getCitiesWeather().subscribe(response => {this.citiesWeather$ = response; console.log(response);
-    } )
+    this.citiesService.getCitiesWeather().subscribe(response =>  console.log(response)
+     )
   }
 
 
   getCity(value: string) {
     this.citiesService.getCityByName(this.selectedCity).subscribe(response => this.citiesWeather$ = response
     )
-
+    this.cardIsVisible = true;
   }
 
 }

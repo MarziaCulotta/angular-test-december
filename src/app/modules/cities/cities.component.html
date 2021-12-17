@@ -1,12 +1,12 @@
-<div>
-  <h1>CAV Weather App</h1>
-  <h2>La tua città e le tue previsioni adesso</h2>
+<div class="ms-3">
+  <h1 class="title text-center mb-3">CAV Weather App</h1>
+  <h2 class="text-center mb-5">La tua città e le tue previsioni adesso</h2>
   <h3>Previsioni correnti</h3>
   <div class="label-container">
     <label for="selectedCity">Inserisci una città</label>
-    <input type="text" class="form-control" id="selectedCity" name="selectedCity" [(ngModel)]="selectedCity">
+    <input type="text" class="form-control mb-2" id="selectedCity" name="selectedCity" [(ngModel)]="selectedCity"/>
   </div>
   <button class="btn btn-primary" (click)="getCity(selectedCity)">Invia</button>
 </div>
 
-<angtest-cards name={{citiesWeather$.name}} description={{citiesWeather$.weather[0].description}} *ngIf="selectedCity"></angtest-cards>
+<angtest-cards name={{citiesWeather$.name}} country={{citiesWeather$?.sys?.country}} description={{citiesWeather$.weather[0].description}} temp={{citiesWeather$.main.temp}} icon={{citiesWeather$.weather[0].icon}} *ngIf="cardIsVisible"></angtest-cards>

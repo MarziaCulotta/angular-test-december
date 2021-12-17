@@ -1,7 +1,8 @@
 export interface ICityWeather {
-  name: 'string';
-  date: 'string';
+  name: string;
+  country: string;
+  date: string;
   temp: number;
-  description: 'string';
-  icon: 'string'
+  description: string;
+  icon: string;
 }

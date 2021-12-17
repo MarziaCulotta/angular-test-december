@@ -1,9 +1,13 @@
-<div class="card ms-3 mt-4" style="width: 18rem;">
-  <!-- <img src="..." class="card-img-top" alt="..."> -->
+<div class="card ms-3 mt-4" style="width: 18rem">
   <div class="card-body">
-    <p class="card-title">{{name}}</p>
-    <p class="card-text">{{description}}</p>
-    <p class="card-text">{{temp}}</p>
-    <p class="card-text">{{icon}}</p>
+    <span class="me-1">Città: {{ name }},</span>
+    <span class="me-3">{{ country }}</span>
+    <br>
+    <span class="me-2">Clima corrente: {{ description }}</span>
+    <img src="https://openweathermap.org/img/wn/{{icon}}.png" class="card-img-top" alt="icona previsioni">
+    <br>
+    <span class="me-3 mb-3">Temperature: {{ temp }} °C</span>
+    <br>
+    <span class="me-3">Data: {{ today | date: 'd MMMM y' }}</span>
   </div>
 </div>
