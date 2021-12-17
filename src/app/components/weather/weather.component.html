@@ -9,6 +9,4 @@
   <button class="btn btn-primary" (click)="getCity()">Invia</button>
 </div>
 
-<angtest-cards ></angtest-cards>
-
-<!-- *ngIf="cardIsVisible" -->
+<angtest-cards *ngIf="cardIsVisible" [weather]="citiesWeather$"></angtest-cards>
