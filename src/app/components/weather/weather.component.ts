@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICityWeather } from 'src/app/shared/models/city-weather.model';
+import { ICitiesWeather } from 'src/app/shared/models/city-weather.model';
 import { WeatherService } from './weather.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { WeatherService } from './weather.service';
 })
 export class WeatherComponent implements OnInit {
 
-  public citiesWeather$!: ICityWeather;
+  public citiesWeather$!: ICitiesWeather;
   public selectedCity = '';
   public cardIsVisible = false;
 
@@ -19,7 +19,7 @@ export class WeatherComponent implements OnInit {
 
 
   getCity() {
-    this.weatherService.getCitiesWeather(this.selectedCity).subscribe(res => this.citiesWeather$ = res)
+    this.weatherService.getWeatherbyCoords(this.selectedCity).subscribe((res) => (this.citiesWeather$ = res));
 
     this.cardIsVisible = true;
   }

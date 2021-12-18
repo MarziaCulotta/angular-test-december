@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICityWeather } from 'src/app/shared/models/city-weather.model';
+import { ICitiesWeather } from 'src/app/shared/models/city-weather.model';
 import { WeatherService } from '../weather/weather.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { WeatherService } from '../weather/weather.service';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
-  @Input() weather!: ICityWeather;
+  @Input() weather!: ICitiesWeather;
 
   constructor(private readonly weatherService: WeatherService) {}
 

@@ -1,24 +1,24 @@
-export interface ICityWeather {
-  name: string;
-  country: string;
+
+export interface ICitiesWeather {
+  city: string;
   date: Date;
   temperature: number;
   description: string;
   icon: string;
 }
-
-export interface IWeatherApi {
-  description: string;
-  icon: string;
+export interface Coord {
+  lat: string;
+  lon: string;
 }
 
-export interface IApiResponseWeather {
-  name: string;
-  sys: {
-    country: string
+export interface ApiResC {
+  lat: string;
+  lon: string;
+}
+
+export interface ApiResW  {
+  current: {
+    weather: [{ description: string; icon: string }];
+    temp: number;
   };
-  main: {
-    temp: number
-  };
-  weather: IWeatherApi[];
 }

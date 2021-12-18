@@ -1,12 +1,11 @@
 <div class="card ms-3 mt-4" style="width: 18rem">
   <div class="card-body">
-    <span class="me-1">Città: {{ weather.name }},</span>
-    <span class="me-3">{{ weather.country }}</span>
+    <span class="me-1">Città: {{ weather.city }},</span>
     <br>
     <span class="me-2">Clima corrente: {{ weather.description }}</span>
     <img src={{weather.icon}} class="card-img-top" alt="weather-description">
     <br>
-    <span class="me-3 mb-3">Temperature: {{ weather.temperature }} °C</span>
+    <span class="me-3 mb-3">Temperature: {{ weather.temperature }} <sup>°C</sup></span>
     <br>
     <span class="me-3">Data: {{ weather.date | date: 'd MMMM y' }}</span>
   </div>
