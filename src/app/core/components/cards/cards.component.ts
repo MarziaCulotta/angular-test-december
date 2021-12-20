@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ICityWeather } from 'src/app/shared/models/city-weather.model';
-import { WeatherService } from '../weather/weather.service';
+import { WeatherService } from '../service/weather.service';
+
 
 @Component({
   selector: 'angtest-cards',
